@@ -6,7 +6,7 @@
       <p><strong>{{ q.question }}</strong></p>
       {% for code, text in q.shuffled_answers %}
         <label>
-          <input type="radio" name="q{{ forloop.counter }}" value="{{ code }}" required>
+          <input type="radio" name="q{{ forloop.parentloop.counter0 }}" value="{{ code }}" required>
           {{ text }}
         </label><br>
       {% endfor %}

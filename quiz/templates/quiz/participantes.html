@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Participantes</title>
+</head>
+<body>
+    <h1>Participantes</h1>
+    <table border="1">
+        <tr>
+            <th>Nick</th>
+            <th>Casa</th>
+        </tr>
+        {% for p in participantes %}
+        <tr>
+            <td>{{ p.nick }}</td>
+            <td>{{ p.final_house }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -6,4 +6,5 @@ urlpatterns = [
     path('quiz/', views.quiz, name='quiz'),
     path('choose-house/', views.choose_house, name='choose_house'),
     path('result/', views.result, name='result'),
+    path('participantes/', views.participantes, name='participantes'),
 ]

@@ -97,3 +97,9 @@ def choose_house(request):
 def result(request):
     house = Participant.objects.get(nick=request.session['nick']).final_house
     return render(request, 'quiz/result.html', {'house': house})
+from django.shortcuts import render
+from .models import Participant
+
+def participantes(request):
+    participantes = Participant.objects.all()
+    return render(request, 'quiz/participantes.html', {'participantes': participantes})
