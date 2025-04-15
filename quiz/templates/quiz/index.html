@@ -1,0 +1,10 @@
+<h2>Bem-vindo ao Chapéu Seletor!</h2>
+<form method="post">
+  {% csrf_token %}
+  <label for="nick">Digite seu nick:</label>
+  <input type="text" name="nick" required>
+  <button type="submit">Começar</button>
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% endif %}
+</form>

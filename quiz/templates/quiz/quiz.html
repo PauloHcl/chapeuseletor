@@ -1,0 +1,17 @@
+<h2>Quiz - Escolha a opção que mais combina com você</h2>
+<form method="post">
+  {% csrf_token %}
+  {% for q in questions %}
+    <div>
+      <p><strong>{{ q.question }}</strong></p>
+      {% for code, text in q.shuffled_answers %}
+        <label>
+          <input type="radio" name="q{{ forloop.counter }}" value="{{ code }}" required>
+          {{ text }}
+        </label><br>
+      {% endfor %}
+    </div>
+    <hr>
+  {% endfor %}
+  <button type="submit">Enviar Respostas</button>
+</form>

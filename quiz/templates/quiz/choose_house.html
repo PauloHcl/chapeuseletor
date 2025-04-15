@@ -1,0 +1,11 @@
+<h2>Empate! Escolha sua casa preferida:</h2>
+<form method="post">
+  {% csrf_token %}
+  {% for house in tied %}
+    <label>
+      <input type="radio" name="house" value="{{ house }}" required>
+      {{ house }}
+    </label><br>
+  {% endfor %}
+  <button type="submit">Escolher</button>
+</form>
